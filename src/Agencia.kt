@@ -1,4 +1,4 @@
-open class Agencia (nome: String, conta: List<Conta>){
+open class Agencia (val nome: String, val conta: List<Conta>){
 
     fun adicionarConta(conta: Conta) {
 
