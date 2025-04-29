@@ -1,14 +1,16 @@
-open class Agencia (val nome: String, val conta: List<Conta>){
+open class Agencia (public var nome: String){
+    private val contas = mutableListOf<Conta>();
 
-    fun adicionarConta(conta: Conta) {
 
+    public fun adicionarConta(conta: Conta) {
+        contas.add(conta);
     }
 
-    fun removerConta(conta: Conta) {
-
+    public fun removerConta(conta: Conta) {
+        contas.remove(conta)
     }
 
-//    fun obterConta(conta: String): Conta {
-//
-//    }
+    public fun obterConta(numero: String): Conta? {
+        return contas.find { it.numeroConta == numero }
+    }
 }

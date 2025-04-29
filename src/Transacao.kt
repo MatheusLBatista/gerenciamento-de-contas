@@ -1,8 +1,8 @@
-import javax.xml.crypto.Data
+//import java.util.Date
 
-class Transacao (val idtransacao: String, val valor: Double, val data: Data){
+class Transacao (private val idtransacao: String, public val valor: Double, public val data: String) {
 
-//    fun executar(): Boolean{
-//        return
-//    }
+    fun executar(): Boolean{
+        return true;
+    }
 }

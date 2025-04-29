@@ -1,14 +1,15 @@
-class Banco (val nome: String, val agencias: MutableList<Agencia>){
+class Banco (public var nome: String){
+    val agencias = mutableListOf<Agencia>()
 
-    fun adicionarAgencia(agencia: Agencia) {
+    public fun adicionarAgencia(agencia: Agencia) {
         agencias.add(agencia);
     }
 
-    fun removerAgencia(agencia: Agencia) {
+    public fun removerAgencia(agencia: Agencia) {
         agencias.remove(agencia);
     }
 
-    fun obterAgencia(nome: String): Agencia? {
+    public fun obterAgencia(nome: String): Agencia? {
         return agencias.find { it.nome == nome }
     }
 }
