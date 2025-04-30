@@ -1,5 +1,5 @@
-class Banco (public var nome: String){
-    val agencias = mutableListOf<Agencia>()
+class Banco (private var nome: String){
+    private val agencias = mutableListOf<Agencia>()
 
     public fun adicionarAgencia(agencia: Agencia) {
         agencias.add(agencia);

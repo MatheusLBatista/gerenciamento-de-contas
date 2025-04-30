@@ -1,4 +1,4 @@
-class Conta (val numeroConta: String, cliente: Cliente){
+class Conta (val numeroConta: String, public val cliente: Cliente){
     private var saldo: Double = 0.0;
 
     public fun depositar(valor: Double){

@@ -1,0 +1,80 @@
+BANCO
+nome → privado
+Justificativa: mantém o nome do banco protegido, previnindo modificações externas.
+
+agencias → privado
+Justificativa: a lista de agências não pode ser manipulada diretamente, apenas por meio métodos.
+
+adicionarAgencia() → público
+Justificativa: permite o recebimento de novas agências de forma controlada.
+
+removerAgencia() → público
+Justificativa: permite remoção de uma agência.
+
+obterAgencia() → público
+Justificativa: responsável por recuperar uma agência pelo nome.
+
+
+AGÊNCIA
+nome → público (val)
+Justificativa: é uma informação fixa para identificação, deve ser acessível externamente.
+
+contas → privado
+Justificativa: protege a lista de contas de modificações externas fora da classe.
+
+adicionarConta() → público
+Justificativa: fornece uma maneira de adicionar contas.
+
+removerConta() → público
+Justificativa: permite remover contas de maneira controlada.
+
+obterConta() → público
+Justificativa: permite achar contas específicas pelo número.
+
+
+CLIENTE
+nome → público (val)
+Justificativa: é uma informação de leitura, sendo segura acessar externamente.
+
+endereco → privado (var)
+Justificativa: evita alterações diretas, apenas pelo próprio cliente.
+
+definirEndereco() → público
+Justificativa: permite atualizar o endereço do cliente controladamente.
+
+idCliente → público (val)
+Justificativa: identificação única que pode fazer parte em outros trechos do código.
+
+
+CONTA
+numeroConta → público (val)
+Justificativa: preciso para identificação e operações.
+
+saldo → privado (var)
+Justificativa: proteção contra mundanças diretas e indevidas, manipulado por métodos próprios.
+
+cliente → público (val)
+Justificativa: preciso para relacionar a conta ao cliente.
+
+depositar() → público
+Justificativa: método principal de entrada de valores, sendo assim, é preciso estar acessível.
+
+sacar() → público
+Justificativa: operação de saída de valores controladamente.
+
+obterSaldo() → público
+Justificativa: consulta ao valor atual da conta.
+
+
+TRANSAÇÃO
+idTransacao → público (val)
+Justificativa: identificação usada em outros registros.
+
+valor → público (val)
+Justificativa: preciso para controle e visualização do valor.
+
+data → público (val)
+Justificativa: define a data que a transação foi feita, tendo utilidade em relatórios.
+
+executar() → público
+Justificativa: mostra a ação de uma transação e precisa estar acessível a outros componentes do código.

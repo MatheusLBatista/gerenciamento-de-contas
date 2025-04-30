@@ -1,4 +1,4 @@
-open class Agencia (public var nome: String){
+class Agencia (public val nome: String){
     private val contas = mutableListOf<Conta>();
 
 
